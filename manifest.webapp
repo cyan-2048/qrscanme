@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "name": "QRScanMe",
+  "description": "Rapid QR Scanner",
+  "type": "web",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/icons/kaios_56.png",
+    "112": "/icons/kaios_112.png"
+  },
+  "cursor": true,
+  "type":"privileged",
+  "developer": {
+    "name": "SpudnikLab",
+    "url": "https://www.spudniklab.com"
+  },
+  "locales": {
+    "en-US": {
+      "name": "My first Vanilla App for KaiOS",
+      "subtitle": "Simple example of a to-do list",
+      "description": "Simple example of a to-do list"
+    }
+  },
+  "permissions": 
+	{
+		"video-capture": {
+		"description": "Reading Codes using the Camera"
+		}
+	},
+  "default_locale": "en-US"
+}

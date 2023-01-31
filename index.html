@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Scan Me</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="splashscreen">
+      <div>
+        <img
+          id="spudniklab-logo"
+          src="./images/SpudnikLabLogo.png"
+          alt="SpudnikLab Logo"
+        />
+      </div>
+      <div id="qrscanme-logo-container">
+        <img
+          id="qrscanme-logo"
+          src="./images/QRScanMeLogo-Illustration.png"
+          alt="QRScanMe Logo"
+        />
+      </div>
+      <div>
+        <img
+          id="qrscanme-text"
+          src="./images/QRSCanMeLogo-Text.png"
+          alt="QRScanMe Text"
+        />
+      </div>
+    </section>
+    <section class="main">
+      <div id="reader"></div>
+    </section>
+    <section class="howToUse">
+      <div id="qrscanme-text-container">
+        <img
+          id="howToUse-logo"
+          src="./images/QRSCanMeLogo-Text.png"
+          alt="QRScanMe Text"
+        />
+      </div>
+      <div class="qrscanme-logo-container"></div>
+      <div id="howToUse-text">
+        <p id="howToUse-text-title"></p>
+        <p id="howToUse-text-subtitle"></p>
+      </div>
+      <div id="howToUse-radio"></div>
+    </section>
+
+    <div class="scan-result"></div>
+    <div class="history">
+      <p class="history-title">History</p>
+      <div class="history-search-container">
+        <input
+          class="history-search"
+          type="text"
+          name="Search History"
+          placeholder="Search History"
+          class="history-search"
+        />
+      </div>
+      <div class="history-item-container"></div>
+    </div>
+    <div class="options-container">
+      <div class="options">
+        <div class="options-title"></div>
+        <div class="options-item-container">
+          <button></button>
+        </div>
+        <div class="options-type-container"></div>
+      </div>
+    </div>
+
+    <div class="navigation-bar">
+      <div class="navigation-button-container" id="left">
+        <button></button>
+      </div>
+      <div class="navigation-button-container" id="center">
+        <button></button>
+      </div>
+      <div class="navigation-button-container" id="right">
+        <button></button>
+      </div>
+    </div>
+
+    <script src="jquery-3.6.3.js"></script>
+    <script src="html5-qrcode.min.js"></script>
+    <script src="initiation.js"></script>
+    <script src="options.js"></script>
+    <script src="navigation.js"></script>
+    <script src="scanner.js"></script>
+    <script src="render.js"></script>
+  </body>
+</html>

@@ -1,0 +1,374 @@
+/* General Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+a {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-decoration: none;
+}
+input{
+  all: unset;
+}
+
+/* Main Camera Screen CSS */
+.main-camera {
+  height: 100%;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+  height: 40px;
+  width: 100%;
+  background: black;
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fdfcfd;
+}
+.navigation-button-container {
+  display: flex;
+  height: 100%;
+  flex: 1;
+}
+.navigation-button-container#right {
+  justify-content: flex-end;
+}
+.navigation-button-container#center {
+  justify-content: center;
+}
+.navigation-button-image {
+  height: 60%;
+  width: auto;
+}
+.navigation-button-container > button {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.navigation-button-container > button:hover {
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+/* Options CSS */
+.options-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  background-color: rgb(0, 0, 0, 0.3);
+  display: none;
+}
+.options-container.active {
+  display: block;
+}
+
+.options {
+  width: 100%;
+  background: #ebebeb;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  z-index: 50;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: black;
+}
+
+.options-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 6px;
+}
+
+.options-item-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.options-item-container > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 8px 16px;
+}
+.options-item-container > button.active {
+  background-color: rgba(32, 88, 255, 0.1);
+}
+.options-item-container > button:hover {
+  background-color: rgba(32, 88, 255, 0.1);
+}
+
+.options-radio-outer {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 1px solid #9cb2f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-radio-inner {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+.options-radio-inner.active {
+  background: #9cb2f3;
+}
+
+.options-type-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40px;
+}
+.options-type-container > button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex: 1;
+  padding: 8px 0 0;
+}
+.options-type-container > button:hover {
+  background-color: rgba(32, 88, 255, 0.1);
+}
+
+.options-type-image {
+  height: 24px;
+  width: auto;
+}
+
+.options-type-underline {
+  width: 100%;
+  height: 2px;
+  background: none;
+  margin-top: auto;
+}
+.options-type-underline.active {
+  background: #2058ff;
+}
+
+/* Main Camera CSS */
+.main {
+  display: none;
+}
+.main.active {
+  display: block;
+}
+
+#reader {
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#reader video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%;
+  min-height: 100%;
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto !important;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scan-result {
+  position: absolute;
+  color:white;
+  display:none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #9cb2f3;
+  padding: 8px 16px;
+  border-radius: 5px;
+  z-index: 100;
+}
+.scan-result.active{
+  display:block;
+}
+
+/* History CSS */
+.history {
+  height: 100%;
+  width: 100%;
+  display: none;
+  padding:16px;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.history.active{
+  display: block;
+}
+
+.history-title{
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.history-item-container{
+  width: 100%;
+}
+.history-item{
+  padding:8px;
+  border-bottom: 1px solid white;
+}
+.history-search-container{
+padding:8px;
+border:1px solid white;
+border-radius: 5px;
+margin-bottom: 16px;
+}
+.history-search{
+  width: 100%;
+}
+
+/* How to Use CSS */
+.howToUse {
+  height: 100%;
+  width: 100%;
+  display: none;
+  /* display: flex; */
+  /* position: absolute; */
+  /* z-index: 1000; */
+  flex-direction: column;
+  background-color: #fdfcfd;
+  align-items: center;
+  justify-content: center;
+}
+
+.howToUse.active {
+  display: flex;
+}
+
+#howToUse-logo {
+  height: 3vh;
+  width: auto;
+}
+#howToUse-gif {
+  height: 25vh;
+  width: auto;
+  margin: 40px 0;
+}
+
+#howToUse-text {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+#howToUse-text-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+#howToUse-text-subtitle {
+  font-size: 13px;
+}
+#howToUse-text-subtitle > span {
+  color: #ff56b7;
+}
+#howToUse-radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.howToUse-radio-item {
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  border: 1px solid #2058ff;
+  margin: 0 4px;
+}
+.howToUse-radio-item.active {
+  border: none;
+  background: #ff0c97;
+}
+
+/* Splash Screen CSS */
+.splashscreen {
+  height: 100%;
+  width: 100%;
+  display: none;
+  /* display: flex; */
+  position: absolute;
+  z-index: 1000;
+  flex-direction: column;
+  background-color: #fdfcfd;
+  align-items: center;
+  justify-content: center;
+}
+#spudniklab-logo {
+  height: 4.3vh;
+  width: auto;
+}
+#qrscanme-logo-container {
+  margin: 8vh 0;
+}
+#qrscanme-logo {
+  height: 45vh;
+  width: auto;
+}
+#qrscanme-text {
+  height: 4vh;
+  width: auto;
+}
+
+/* View Control */
+.fade-out {
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.hidden {
+  display: none;
+}
