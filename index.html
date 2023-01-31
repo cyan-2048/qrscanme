@@ -10,37 +10,21 @@
   <body>
     <section class="splashscreen">
       <div>
-        <img
-          id="spudniklab-logo"
-          src="./images/SpudnikLabLogo.png"
-          alt="SpudnikLab Logo"
-        />
+        <img id="spudniklab-logo" src="./images/SpudnikLabLogo.png" alt="SpudnikLab Logo" />
       </div>
       <div id="qrscanme-logo-container">
-        <img
-          id="qrscanme-logo"
-          src="./images/QRScanMeLogo-Illustration.png"
-          alt="QRScanMe Logo"
-        />
+        <img id="qrscanme-logo" src="./images/QRScanMeLogo-Illustration.png" alt="QRScanMe Logo" />
       </div>
       <div>
-        <img
-          id="qrscanme-text"
-          src="./images/QRSCanMeLogo-Text.png"
-          alt="QRScanMe Text"
-        />
+        <img id="qrscanme-text" src="./images/QRSCanMeLogo-Text.png" alt="QRScanMe Text" />
       </div>
     </section>
     <section class="main">
-      <div id="reader"></div>
+      <video id="reader"></video>
     </section>
     <section class="howToUse">
       <div id="qrscanme-text-container">
-        <img
-          id="howToUse-logo"
-          src="./images/QRSCanMeLogo-Text.png"
-          alt="QRScanMe Text"
-        />
+        <img id="howToUse-logo" src="./images/QRSCanMeLogo-Text.png" alt="QRScanMe Text" />
       </div>
       <div class="qrscanme-logo-container"></div>
       <div id="howToUse-text">
@@ -86,12 +70,15 @@
       </div>
     </div>
 
+    <script src="bundle.js"></script>
+
+    <!--
     <script src="jquery-3.6.3.js"></script>
-    <script src="html5-qrcode.min.js"></script>
+    <script src="qr-scanner.legacy.min.js"></script>
     <script src="initiation.js"></script>
     <script src="options.js"></script>
     <script src="navigation.js"></script>
     <script src="scanner.js"></script>
     <script src="render.js"></script>
-  </body>
+  --></body>
 </html>
